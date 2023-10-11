@@ -1,0 +1,83 @@
+body{
+   background-image: url(https://r4.wallpaperflare.com/wallpaper/767/612/930/nature-landscape-trees-digital-art-wallpaper-d920087dd14a5ddbd64748bf40e1d66d.jpg);
+   background-size: cover;
+   max-height: 80%;
+   overflow:hidden;   
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+ height: 9vh;
+}
+.container{
+  transform: scale(0.6);
+  margin-top: -18vh;
+}
+.logo{
+    font-family: 'Monoton', cursive;
+    font-size: 2rem;
+    color: rgb(5, 158, 79);
+}
+.card{
+    
+    background:rgba(0, 1, 2, 0.599);
+    color: white;
+    /* border: solid 2px  #2fbddd; */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 5);
+    border: 2px solid white;
+   
+}
+.card-header{
+   color: white;
+  
+   font-weight: bold;
+   font-size: 1.2rem;
+    background:rgb(38, 149, 161);
+    
+
+   }
+  .my-4{
+    color: chocolate;
+    font-size: 8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    /* text-transform: capitalize; */
+  }
+  .my-0{
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .list-unstyled{
+    text-transform: capitalize;
+    font-size: 1.5rem;
+  }
+
+/* animation */
+
+  
+  .snowfall {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://media3.giphy.com/media/ggK4TpfK2cfuZcokhj/giphy.webp?cid=ecf05e47o1m8p4v7atqzv7tjav9s1gois2y0rwxgnrs4tf6n&ep=v1_stickers_search&rid=giphy.webp&ct=s'); /* Replace with your snowflake image */
+    background-repeat: repeat;
+    pointer-events: none;
+    z-index: -1;
+    animation: snowfall 10s linear infinite;
+  }
+  
+  /* @keyframes snowfall {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100vh);
+    }
+  } */
+  
+  

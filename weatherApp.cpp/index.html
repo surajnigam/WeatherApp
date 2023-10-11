@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <link rel="stylesheet" href="style.css">
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><span class="logo">Srj</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Help</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Cities
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Delhi</a></li>
+                  <li><a class="dropdown-item" href="#">Bhopal</a></li>
+                  <li><a class="dropdown-item" href="#">Gwalior</a></li>
+                  <li><a class="dropdown-item" href="#">Ujjain</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">other</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+   
+    <div class="snowfall"></div>
+      <div class="container">
+        <h1  class="my-4 text-center " >Weather of <span id="cityName" ></span></h1>
+        <main>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-">Temperature</span></h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><span id="temp2">18.01</span> &deg;C<small class="text-body-secondary fw-light"></small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>temp =   <span id="temp">18.01</span></li>
+                      <li> temp_min =   <span id="temp_min">18.01</span></li>
+                      <li>temp_max =   <span id="temp_max">18.01</span></li>
+                      <!-- <li>Help center access</li> -->
+                    </ul>
+                    <!-- <button type="button" class="w-100 btn btn-lg btn-outline-">Sign up for free</button> -->
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-">Weather</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><span id="description2">clear sky</span><small class="text-body-secondary fw-light"></small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li> <span id="description">clear sky</span></li>
+                        <li>humidity =<span id="humidity">20</span>%</li>
+                        <li>pressure =<span id="pressure">20</span>Hg</li>
+                    </ul>
+                    <!-- <button type="button" class="w-100 btn btn-lg btn-">Get started</button> -->
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-">
+                  <div class="card-header py-3 text-bg- border-">
+                    <h4 class="my-0 fw-">Wind</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><span id="speed2">20</span> Km/h<small class="text-body-secondary fw-light"></small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>speed = <span id="speed"></span></li>
+                        <li>deg = <span id="deg">2</span></li>
+                        <li>gust = <span id="gust">20</span></li>
+                    </ul>
+                    <!-- <button type="button" class="w-100 btn btn-lg btn-">Contact us</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+        
+            <!-- <h2 class="display-6 text-center mb-4">Compare plans</h2>
+        
+            <div class="table-responsive">
+              <table class="table text-center">
+                <thead>
+                  <tr>
+                    <th style="width: 34%;"></th>
+                    <th style="width: 22%;">Free</th>
+                    <th style="width: 22%;">Pro</th>
+                    <th style="width: 22%;">Enterprise</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="text-start">Public</th>
+                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="text-start">Private</th>
+                    <td></td>
+                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                  </tr>
+                </tbody>
+        
+                <tbody>
+                  <tr>
+                    <th scope="row" class="text-start">Permissions</th>
+                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="text-start">Sharing</th>
+                    <td></td>
+                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="text-start">Unlimited members</th>
+                    <td></td>
+                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="text-start">Extra security</th>
+                    <td></td>
+                    <td></td>
+                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> -->
+            <div class="gif" style="display: flex">
+                <img src="https://media3.giphy.com/media/xT9IgMfVVT58g6LWI8/giphy.webp?cid=ecf05e47tra8m1d637ghq3hen8o2nf8d409263r8p544zcho&ep=v1_stickers_search&rid=giphy.webp&ct=s" alt="">
+                <img src="https://media2.giphy.com/media/dlw0oGJSF4t8ZzrNJD/giphy.webp?cid=ecf05e47idh8yuexqa1rpjrq21krpwysueqhal9nhq47i35u&ep=v1_stickers_search&rid=giphy.webp&ct=s"  alt="">
+            
+            </div>
+           
+       
+          </main>
+      </div>
+    </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="script2.js"></script>
+  </body>
+</html>
